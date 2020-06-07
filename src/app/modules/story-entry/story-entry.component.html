@@ -1,6 +1,6 @@
 <div class="story-entry-container">
   <ng-container>
-    <form [formGroup]="storyForm" (ngSubmit)="onSubmit()">
+    <form #form="ngForm" [formGroup]="storyForm" (ngSubmit)="onSubmit()">
       <mat-form-field class="name-container">
         <mat-label>Name</mat-label>
         <input matInput placeholder="Name" formControlName="name" (change)="onNameChange($event)" />
@@ -24,10 +24,10 @@
         <mat-label>Title <span>*</span></mat-label>
         <input matInput placeholder="Title" formControlName="title" />
       </mat-form-field>
-      <div class="full-width">
+      <div class="full-width" [class.invalid]="form.submitted && storyForm.get('story').invalid">
         <label for="quill" class="story-label">Story <span>*</span></label>
         <div class="quill-container">
-            <quill-editor id="quill" [styles]="{height: '200px'}"></quill-editor>
+            <quill-editor id="quill" [styles]="{height: '200px'}" formControlName="story"></quill-editor>
         </div>
       </div>
       <div>
