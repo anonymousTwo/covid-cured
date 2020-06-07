@@ -1,0 +1,38 @@
+<div class="story-entry-container">
+  <ng-container>
+    <form #form="ngForm" [formGroup]="storyForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="name-container">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" (change)="onNameChange($event)" />
+      </mat-form-field>
+      <div class="anonymous-container">
+        <mat-checkbox (change)="onAnonymousChange($event)" [disabled]="storyForm.get('isAnonymous').disabled" formControlName="isAnonymous">Anonymous</mat-checkbox>
+      </div>
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Phone <span>*</span></mat-label>
+        <input matInput placeholder="Phone" formControlName="mobile" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Location <span>*</span></mat-label>
+        <input matInput placeholder="Location" formControlName="location" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Title <span>*</span></mat-label>
+        <input matInput placeholder="Title" formControlName="title" />
+      </mat-form-field>
+      <div class="full-width" [class.invalid]="form.submitted && storyForm.get('story').invalid">
+        <label for="quill" class="story-label">Story <span>*</span></label>
+        <div class="quill-container">
+            <quill-editor id="quill" [styles]="{height: '200px'}" formControlName="story"></quill-editor>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" type="submit">Publish</button>
+      </div>
+    </form>
+  </ng-container>
+</div>

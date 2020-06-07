@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  storyDetails: any;
-  constructor(private http: HttpClient, private router: Router) { }
+   storyDetails: any;
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.fetchStory();
   }
 
@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
     this.http.get('../../../assets/list.json').subscribe(data => {
       this.storyDetails = data;
       console.log(data);
-    });
+    })
   }
 
   viewStoryRoute() {

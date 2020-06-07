@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/list/list.module').then(m => m.ListModule)
   },
   {
+    path: 'add-story',
+    loadChildren: () => import('./modules/story-entry/story-entry.module').then(m => m.StoryEntryModule)
+  },
+  {
     path: 'view-Story',
     loadChildren: () => import('./modules/view-story/view-story.module').then(m => m.ViewStoryModule)
   },
