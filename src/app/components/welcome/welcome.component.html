@@ -1,4 +1,29 @@
-<p>welcome works!</p>
-<a routerLink="list">list</a>
+<div fxLayout="column" fxLayoutGap="10px">
 
-<mat-card>Simple card</mat-card>
+  <div class="container">
+    <mat-card class="main-card" fxLayout="column" fxLayoutAlign="center center">
+
+      <div fxFlex="30">
+        space for logo
+      </div>
+
+      <div fxFlex="70">
+        <mat-list>
+          <mat-list-item *ngFor="let content of introductionContent">
+            <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+            <div mat-line>{{content.item}}</div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+
+    </mat-card>
+  </div>
+
+  <div class="navigate">
+    <a class="link" mat-raised-button routerLink="list">
+      Go To Website
+      <mat-icon mat-list-icon>double_arrow</mat-icon>
+    </a>
+  </div>
+
+</div>

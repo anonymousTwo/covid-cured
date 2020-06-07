@@ -1,0 +1,28 @@
+.container {
+  padding: 20px 15px;
+}
+
+.main-card {
+  height: 80vh;
+}
+
+.navigate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .link {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+  }
+}
+
+.mat-list-base .mat-list-item.mat-list-item-with-avatar,
+.mat-list-base .mat-list-option.mat-list-item-with-avatar {
+  height: 100px;
+  margin-top: 15px;
+}
+
+.mat-list-base .mat-list-item .mat-line {
+  white-space: normal;
+}
