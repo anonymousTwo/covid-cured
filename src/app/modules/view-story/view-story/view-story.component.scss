@@ -1,0 +1,27 @@
+.content {
+  height: calc(100vh - 275px);
+}
+
+
+
+.social-icons {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-size: 100%;
+}
+
+.share-story {
+  height: 70px;
+
+  .facebook-icon {
+    @extend .social-icons;
+    background-image: url('../../../../assets/fb.svg');
+  }
+
+  .twitter-icon {
+    @extend .social-icons;
+    background-image: url('../../../../assets/tt.svg');
+  }
+
+}
