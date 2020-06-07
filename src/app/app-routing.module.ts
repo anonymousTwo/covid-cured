@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +15,10 @@ const routes: Routes = [
   {
     path: 'add-story',
     loadChildren: () => import('./modules/story-entry/story-entry.module').then(m => m.StoryEntryModule)
+  },
+  {
+    path: 'view-Story',
+    loadChildren: () => import('./modules/view-story/view-story.module').then(m => m.ViewStoryModule)
   },
   {
     path: '*',

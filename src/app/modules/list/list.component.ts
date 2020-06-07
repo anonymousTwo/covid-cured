@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -19,6 +20,10 @@ export class ListComponent implements OnInit {
       this.storyDetails = data;
       console.log(data);
     })
+  }
+
+  viewStoryRoute() {
+    this.router.navigate(['/view-Story']);
   }
 
 }
