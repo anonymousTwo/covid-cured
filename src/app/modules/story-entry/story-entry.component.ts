@@ -19,7 +19,7 @@ export class StoryEntryComponent implements OnInit {
       name: [undefined, []],
       isAnonymous: [undefined, []],
       email: [undefined, []],
-      mobile: [undefined, [Validators.required]],
+      mobile: [undefined, [Validators.required, Validators.pattern(/^\d{10}$/)]],
       location: [undefined, [Validators.required]],
       title: [undefined, [Validators.required]],
       story: [undefined, [Validators.required]],
@@ -28,7 +28,7 @@ export class StoryEntryComponent implements OnInit {
   }
 
   onSubmit() {
-
+    console.log(this.storyForm.value);
   }
 
   onNameChange(evt) {
