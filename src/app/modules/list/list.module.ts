@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list.component';
 import { Routes, RouterModule } from '@angular/router';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -16,6 +18,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    AngularMaterialModule,
+    HttpClientModule,
     RouterModule.forChild(routes)
   ]
 })
