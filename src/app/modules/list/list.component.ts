@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+   storyDetails: any;
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
+  ngOnInit(): void { 
+    this.fetchStory();
+  }
 
-  ngOnInit(): void {
+  fetchStory() {
+    this.http.get('../../../assets/list.json').subscribe(data => {
+      this.storyDetails = data;
+      console.log(data);
+    })
   }
 
 }

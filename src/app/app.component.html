@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<div class="app-container">
+  <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="logo" routerLink="/">My Corona Story</div>
+    <div>
+        <button mat-raised-button routerLink="add-story">Publish My Story</button>
+    </div>
+  </div>
+  <div class="main-container">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer" fxLayout="row" fxLayoutAlign="end center">
+    <div>
+        <button mat-raised-button routerLink="add-story">Publish My Story</button>
+    </div>
+  </div>
+</div>
