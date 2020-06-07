@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/list/list.module').then(m => m.ListModule)
   },
   {
+    path: 'add-story',
+    loadChildren: () => import('./modules/story-entry/story-entry.module').then(m => m.StoryEntryModule)
+  },
+  {
     path: '*',
     redirectTo: ''
   }
