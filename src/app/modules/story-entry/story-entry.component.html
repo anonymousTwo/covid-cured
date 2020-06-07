@@ -36,3 +36,11 @@
     </form>
   </ng-container>
 </div>
+<ng-template #successTemplate let-data>
+  <div>
+    Data saved successfully!
+  </div>
+  <div>
+    Please save this <strong>{{data.storyId}}</strong> to edit/delete this post.
+  </div>
+</ng-template>
