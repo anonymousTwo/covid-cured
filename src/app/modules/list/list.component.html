@@ -1,18 +1,17 @@
 <div class="story-list-wrap">
-    <mat-card class="story-card marB30" *ngFor="let item of storyDetails">
-        <mat-card-header>
-            <div mat-card-avatar class="header-image"> 
-                <img mat-card-image src="../../../assets/images/user.svg">
-            </div>
-            <mat-card-title>{{item.title}}</mat-card-title>
-            <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../../assets/images/story-image.jpg" alt="My Story Image">
-        <mat-card-content>
-            <p>{{item.story}}
-            </p>
-            <a mat-stroked-button href="https://www.google.com/">Read more</a>
-        </mat-card-content>
-    </mat-card>
+  <mat-card class="story-card marB30" *ngFor="let item of storyDetails">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image">
+        <img mat-card-image src="../../../assets/images/user.svg">
+      </div>
+      <mat-card-title>{{item.title}}</mat-card-title>
+      <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/images/story-image.jpg" alt="My Story Image">
+    <mat-card-content>
+      <p>{{item.story}}
+      </p>
+      <a mat-stroked-button (click)="viewStoryRoute()">Read more</a>
+    </mat-card-content>
+  </mat-card>
 </div>
-
