@@ -20,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [WelcomeComponent],
+  declarations: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
