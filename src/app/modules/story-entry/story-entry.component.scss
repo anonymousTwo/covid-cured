@@ -1,0 +1,17 @@
+.story-entry-container {
+  padding: 10px;
+  .full-width {
+    width: 100%;
+  }
+  .name-container {
+      width: 60%;
+  }
+  .anonymous-container {
+    width: 35%;
+    display: inline-block;
+    padding-left: 2%;
+  }
+  .quill-container {
+    margin: 10px 0;
+  }
+}
