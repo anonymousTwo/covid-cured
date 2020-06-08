@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-story-entry',
@@ -10,8 +11,11 @@ export class StoryEntryComponent implements OnInit {
 
   storyForm: FormGroup;
 
+  @ViewChild('successTemplate') successTemplate: TemplateRef<any>;
+
   constructor(
-    private readonly fb: FormBuilder
+    private readonly fb: FormBuilder,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -19,7 +23,7 @@ export class StoryEntryComponent implements OnInit {
       name: [undefined, []],
       isAnonymous: [undefined, []],
       email: [undefined, []],
-      mobile: [undefined, [Validators.required]],
+      mobile: [undefined, [Validators.required, Validators.pattern(/^\d{10}$/)]],
       location: [undefined, [Validators.required]],
       title: [undefined, [Validators.required]],
       story: [undefined, [Validators.required]],
@@ -28,7 +32,18 @@ export class StoryEntryComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.storyForm.value);
+    this.openDialog();
+  }
 
+  openDialog() {
+    const dialogRef = this.dialog.open(this.successTemplate, {
+      data: {storyId: new Date().getTime()}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   onNameChange(evt) {
