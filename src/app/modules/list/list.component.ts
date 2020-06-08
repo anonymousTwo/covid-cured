@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -7,10 +8,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-   storyDetails: any;
-  constructor(private http: HttpClient) { }
+  storyDetails: any;
+  constructor(private http: HttpClient, private router: Router) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.fetchStory();
   }
 
@@ -18,7 +19,11 @@ export class ListComponent implements OnInit {
     this.http.get('../../../assets/list.json').subscribe(data => {
       this.storyDetails = data;
       console.log(data);
-    })
+    });
+  }
+
+  viewStoryRoute() {
+    this.router.navigate(['/view-Story']);
   }
 
 }
