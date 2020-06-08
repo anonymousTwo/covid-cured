@@ -1,0 +1,47 @@
+@import "../../../variable.scss";
+
+.story-list-wrap{
+    mat-card-header {
+        .mat-card-header-text {
+            padding-right:20px;
+        }
+        position: relative;
+        .share-icon {
+            display: inline-block;
+            height: 20px;
+            width:20px;
+            background:url("../../../assets/images/share-icon.svg") no-repeat;
+            background-size:contain;
+            position: absolute;
+            right: 0;
+            opacity: 0.5;
+            top: 0;
+        }
+    }
+   
+    .banner-img-wrap {
+        height: 150px;
+        width: calc(100% + 32px);
+        margin: 0 -16px 16px -16px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width:100%;
+        }
+        .location-text {
+            color: $white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 8px 20px;
+            margin:0;
+            background: rgba(0,0,0,0.4);
+        }
+    }
+}
+    
+
+:host ::ng-deep .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important
+}

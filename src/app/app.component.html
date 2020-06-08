@@ -1,16 +1,14 @@
 <div class="app-container">
   <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
-    <div class="logo" routerLink="/">My Corona Story</div>
-    <div>
-        <button mat-raised-button routerLink="add-story">Publish My Story</button>
+    <div class="logo" routerLink="/">
+      <span class="logo-img"></span>
+      <span class="logo-text">My Corona Story</span>
     </div>
   </div>
   <div class="main-container">
     <router-outlet></router-outlet>
   </div>
-  <div class="footer" fxLayout="row" fxLayoutAlign="end center">
-    <div>
-        <button mat-raised-button routerLink="add-story">Publish My Story</button>
-    </div>
+  <div class="footer" fxLayout="row" fxLayoutAlign="start center">
+    <p>(c) All copy rights reserved</p>
   </div>
 </div>
