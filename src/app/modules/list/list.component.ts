@@ -18,7 +18,6 @@ export class ListComponent implements OnInit {
   fetchStory() {
     this.http.get('../../../assets/list.json').subscribe(data => {
       this.storyDetails = data;
-      console.log(data);
     });
   }
 

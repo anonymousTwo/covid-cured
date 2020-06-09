@@ -1,20 +1,38 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
-
-  <mat-card>
-    <mat-card-header>
-      <div mat-card-avatar class="header-image">
-        <img mat-card-image src="../../../assets/images/user.svg">
+<div class="story-detail-wrap">
+  <div class="story-header" fxLayout="row" fxLayoutAlign="start center">
+    <div mat-card-avatar class="header-image" fxFlex="20">
+      <img mat-card-image src="../../../assets/images/user.svg">
+    </div>
+    <div class="user-details" fxFlex="80">
+      <div class="story-title">
+        <h3>My corona story</h3>
       </div>
-      <mat-card-title>title</mat-card-title>
-      <mat-card-subtitle>name</mat-card-subtitle>
-    </mat-card-header>
-  </mat-card>
-
-  <mat-card class="content">Content</mat-card>
-
+      <div class="username">Rajesh Kumar</div>
+    </div>
+  </div>
+  <div class="banner-img-wrap">
+    <img src="../../../assets/images/story-image.jpg" alt="My Story Image">
+    <P class="location-text">Maharashtra</P>
+  </div>
+  <div class="story-content">
+    <p class="para-text">
+      Human coronaviruses, first characterized in the 1960s, are responsible for a substantial proportion of upper
+      respiratory tract infections in children. Since 2003, at least 5 new human coronaviruses have been identified,
+      including the severe acute respiratory syndrome
+      coronavirus, which caused significant morbidity and mortality.NL63, representing a group of newly identified group
+      I coronaviruses that includes NL and the New Haven
+      coronavirus, has been identified worldwide.
+    </p>
+    <p class="para-text">
+      These viruses are associated with both upper and lower respiratory tract disease and are likely common human
+      pathogens. The global distribution of a newly identified group II coronavirus, HKU1, has not yet been established.
+      Coronavirology has advanced significantly in the past few years.The SARS epidemic put the animal coronaviruses in
+      the spotlight. The background and history relative to this
+      important and expanding research area are reviewed here.
+    </p>
+  </div>
   <div class="share-story" fxLayout="row" dir="rtl" fxLayoutGap="20px">
     <span class="facebook-icon"></span>
     <span class="twitter-icon"></span>
   </div>
-
 </div>

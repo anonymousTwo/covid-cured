@@ -4,6 +4,18 @@
       <span class="logo-img"></span>
       <span class="logo-text">My Corona Story</span>
     </div>
+    <span class="menu-btn" (click)="toggleSideNav()"></span>
+    <div class="side-nav" [class.side-nav-visible]="showSideNav">
+      <span class="cancel-icon" (click)="showSideNav = false"></span>
+      <div class="menu-links">
+         <ul>
+            <li><a routerLink="" (click)="showSideNav = false">About us</a></li>
+            <li><a routerLink="" (click)="showSideNav = false">Creating Awareness</a></li>
+            <li><a routerLink="list" (click)="showSideNav = false">View Stories</a></li>
+            <li><a routerLink="list/add-story" (click)="showSideNav = false">Publish your own story</a></li>
+         </ul>
+      </div>
+    </div>
   </div>
   <div class="main-container">
     <router-outlet></router-outlet>

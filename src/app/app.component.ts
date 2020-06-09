@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covidCured';
+  showSideNav: boolean = false;
+
+  toggleSideNav() {
+    this.showSideNav = !this.showSideNav;
+  }
 }

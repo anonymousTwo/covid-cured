@@ -1,4 +1,10 @@
 <div class="story-list-wrap">
+  <div class="publish-story">
+    <button mat-raised-button color="primary" type="submit" routerLink="add-story">
+      <span class="plus-icon"></span> 
+      <span class="para-text">Publish your story</span>
+    </button>
+  </div>
   <mat-card class="story-card marB30" *ngFor="let item of storyDetails">
     <mat-card-header>
       <div mat-card-avatar class="header-image">
